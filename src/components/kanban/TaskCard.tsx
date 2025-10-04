@@ -1,3 +1,4 @@
+import { PRIORITY_COLORS, PRIORITY_LABELS } from "@/constants";
 import type { Task } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -5,18 +6,6 @@ interface TaskCardProps {
 	task: Task;
 	isDragging?: boolean;
 }
-
-const priorityColors = {
-	low: "bg-green-500/10 text-green-500 border-green-500/20",
-	medium: "bg-amber-500/10 text-amber-500 border-amber-500/20",
-	high: "bg-red-500/10 text-red-500 border-red-500/20",
-};
-
-const priorityLabels = {
-	low: "Low",
-	medium: "Medium",
-	high: "High",
-};
 
 export function TaskCard({ task, isDragging }: TaskCardProps) {
 	return (
@@ -33,10 +22,10 @@ export function TaskCard({ task, isDragging }: TaskCardProps) {
 				<span
 					className={cn(
 						"px-2 py-0.5 rounded-md text-xs font-medium border whitespace-nowrap",
-						priorityColors[task.priority]
+						PRIORITY_COLORS[task.priority]
 					)}
 				>
-					{priorityLabels[task.priority]}
+					{PRIORITY_LABELS[task.priority]}
 				</span>
 			</div>
 			{task.description && (

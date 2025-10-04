@@ -63,8 +63,8 @@ export const mockTasks: Task[] = [
 		title: "Fazer a tardezinha",
 		description: "Fazer compras para a tardezinha",
 		status: "todo",
-		priority: "medium",
-		dependencies: ["4"],
+		priority: "low",
+		dependencies: [],
 		position: { x: 400, y: 500 },
 	},
 	{
@@ -73,7 +73,7 @@ export const mockTasks: Task[] = [
 		description: "Agendar consulta médica de rotina",
 		status: "todo",
 		priority: "high",
-		dependencies: ["7"],
+		dependencies: [],
 		position: { x: 700, y: 500 },
 	},
 ];
