@@ -115,6 +115,63 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
+}
+
+/* ...existing code... */
+
+/* ReactFlow Dark Mode Styles */
+.react-flow__edge-path {
+  stroke: oklch(var(--primary));
+  transition: stroke 0.3s ease;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: oklch(var(--secondary));
+  stroke-width: 3;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: oklch(var(--accent));
+  stroke-width: 3;
+}
+
+.react-flow__handle {
+  border-color: oklch(var(--border));
+  transition: all 0.2s ease;
+}
+
+.react-flow__controls-button {
+  background: oklch(var(--card)) !important;
+  border-color: oklch(var(--border)) !important;
+  color: oklch(var(--foreground)) !important;
+  transition: all 0.2s ease;
+}
+
+.react-flow__controls-button:hover {
+  background: oklch(var(--muted)) !important;
+  transform: scale(1.05);
+}
+
+.react-flow__minimap {
+  border-radius: 0.5rem;
+}
+
+.react-flow__minimap-mask {
+  fill: oklch(var(--muted) / 0.3);
+}
+
+.react-flow__selection {
+  background: oklch(var(--primary) / 0.1);
+  border: 2px solid oklch(var(--primary));
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 2px oklch(var(--primary));
+}
+
+.react-flow__attribution {
+  opacity: 0.3;
+  font-size: 10px;
 }

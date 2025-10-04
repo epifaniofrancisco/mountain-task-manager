@@ -22,13 +22,9 @@
 
 - [x] **Persistência**: LocalStorage para salvar estado das tarefas
 
-- [ ] **Dark Mode**: Alternância entre tema claro e escuro
+- [x] **Dark Mode**: Alternância entre tema claro e escuro
 
-- [ ] **Animações**: Transições suaves no drag-and-drop
-
-- [ ] **Responsividade**: Otimizado para Mobile, Tablet e Desktop
-
-- [ ] **Testes unitários**: (Jest + React Testing Library)
+- [x] **Animações**: Transições suaves e efeitos
 
 ## 🛠️ Tecnologias
 
