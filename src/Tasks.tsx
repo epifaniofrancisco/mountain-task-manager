@@ -1,8 +1,58 @@
-export default function Tasks() {
+import { useState } from "react";
+import { ViewToggle } from "./components/ViewToggle";
+import { KanbanView } from "./components/KanbanView";
+import FlowView from "./components/FlowView";
+import { Button } from "./components/ui/button";
+import { RotateCcw } from "lucide-react";
+import { useTaskStore } from "./hooks/taskStore";
+
+export default function TasksPage() {
+	const [view, setView] = useState<"kanban" | "flow">("kanban");
+	const { resetTasks } = useTaskStore();
+
+	const handleReset = () => {
+		if (
+			confirm(
+				"Tem certeza que deseja reiniciar todas as tarefas para os dados padrão? Esta ação não pode ser desfeita."
+			)
+		) {
+			resetTasks();
+		}
+	};
+
 	return (
-		<div>
-			<h1>Lista de Tarefas</h1>
-			{/* conteúdo da página */}
+		<div className="min-h-screen bg-background">
+			<header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10 shadow-sm">
+				<div className="container mx-auto px-6 py-6">
+					<div className="flex flex-col items-center text-center space-y-4">
+						<div className="space-y-2">
+							<h1 className="text-4xl md:text-5xl font-bold text-foreground bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+								Mountain Task Manager
+							</h1>
+							<p className="text-base text-muted-foreground max-w-2xl mx-auto">
+								Organize e visualize suas tarefas de projetos
+								com facilidade.
+							</p>
+						</div>
+						<div className="flex items-center gap-4 pt-2">
+							<ViewToggle view={view} onViewChange={setView} />
+							<Button
+								onClick={handleReset}
+								variant="outline"
+								size="sm"
+								className="gap-2"
+							>
+								<RotateCcw className="h-4 w-4" />
+								Reiniciar Tarefas
+							</Button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main className="container mx-auto px-6 py-8">
+				{view === "kanban" ? <KanbanView /> : <FlowView />}
+			</main>
 		</div>
 	);
 }
