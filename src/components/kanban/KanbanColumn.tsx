@@ -6,18 +6,13 @@ import {
 import type { Task, TaskStatus } from "@/lib/types";
 import { SortableTaskCard } from "./SortableTaskCard";
 import { cn } from "@/lib/utils";
+import { COLUMN_COLORS } from "@/constants";
 
 interface KanbanColumnProps {
 	id: TaskStatus;
 	title: string;
 	tasks: Task[];
 }
-
-const columnColors = {
-	todo: "border-green-500/20",
-	"in-progress": "border-amber-500/20",
-	done: "border-green-500/20",
-};
 
 export function KanbanColumn({ id, title, tasks }: KanbanColumnProps) {
 	const { setNodeRef, isOver } = useDroppable({ id });
@@ -36,7 +31,7 @@ export function KanbanColumn({ id, title, tasks }: KanbanColumnProps) {
 				ref={setNodeRef}
 				className={cn(
 					"flex flex-col gap-3 p-4 rounded-lg border-2 border-dashed bg-muted/20 min-h-[500px] transition-colors",
-					columnColors[id],
+					COLUMN_COLORS[id],
 					isOver && "bg-muted/40 border-solid"
 				)}
 			>
