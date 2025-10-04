@@ -10,13 +10,13 @@
 
 - [x] **Drag & Drop**: Arraste tarefas entre colunas usando @dnd-kit
 
-- [ ] **Flow View**: Visualização de grafo com React Flow mostrando dependências
+- [x] **Flow View**: Visualização de grafo com React Flow mostrando dependências
 
 - [x] **Prioridades**: Tags visuais para prioridades (Alta, Média, Baixa)
 
 - [x] **React Router**: Navegação entre views
 
-- [ ] **Interface Responsiva**: Design adaptável com Tailwind CSS
+- [x] **Interface Responsiva**: Design adaptável com Tailwind CSS
 
 ### Recursos Bônus
 
@@ -27,8 +27,6 @@
 - [ ] **Animações**: Transições suaves no drag-and-drop
 
 - [ ] **Responsividade**: Otimizado para Mobile, Tablet e Desktop
-
-- [ ] **Acessibilidade**: Uso de ARIA labels e navegação por teclado
 
 - [ ] **Testes unitários**: (Jest + React Testing Library)
 
