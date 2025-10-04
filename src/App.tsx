@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import TasksPage from './Tasks'
+import TasksPage from './TasksPage'
 
 function App() {
   return (

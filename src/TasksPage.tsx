@@ -26,12 +26,11 @@ export default function TasksPage() {
 				<div className="container mx-auto px-6 py-6">
 					<div className="flex flex-col items-center text-center space-y-4">
 						<div className="space-y-2">
-							<h1 className="text-4xl md:text-5xl font-bold text-foreground bg-gradient-to-r from-primary to-primary/60 bg-clip-text">
+							<h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-[#5552F0]">
 								Mountain Task Manager
 							</h1>
-							<p className="text-base text-muted-foreground max-w-2xl mx-auto">
-								Organize e visualize suas tarefas de projetos
-								com facilidade.
+							<p className="text-xl  text-muted-foreground max-w-2xl mx-auto">
+								Visualize e organize seu trabalho de forma <span className="text-[#7967EC]">inteligente</span> e <span className="text-[#3175F4]">eficiente</span>
 							</p>
 						</div>
 						<div className="flex items-center gap-4 pt-2">
