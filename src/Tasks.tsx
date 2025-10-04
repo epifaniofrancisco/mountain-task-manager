@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { ViewToggle } from "./components/ViewToggle";
-import { KanbanView } from "./components/KanbanView";
-import FlowView from "./components/FlowView";
 import { Button } from "./components/ui/button";
 import { RotateCcw } from "lucide-react";
 import { useTaskStore } from "./hooks/taskStore";
+import { KanbanView } from "./components/kanban/KanbanView";
+import { FlowView } from "./components/flow/FlowView";
 
 export default function TasksPage() {
 	const [view, setView] = useState<"kanban" | "flow">("kanban");

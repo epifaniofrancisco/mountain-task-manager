@@ -10,8 +10,8 @@ import {
 } from "@dnd-kit/core";
 import type { TaskStatus } from "@/lib/types";
 import { useTaskStore } from "@/hooks/taskStore";
-import { KanbanColumn } from "./kanban/KanbanColumn";
-import { TaskCard } from "./kanban/TaskCard";
+import { KanbanColumn } from "./KanbanColumn";
+import { TaskCard } from "./TaskCard";
 
 const columns = [
 	{ id: "todo" as TaskStatus, title: "Todo" },
