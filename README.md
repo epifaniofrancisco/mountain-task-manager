@@ -54,4 +54,4 @@ npm run dev
 
 # Rodar online
 
-(Mountain Task Manager)[https://mountain-task-manager.vercel.app/tasks]
+[Mountain Task Manager](https://mountain-task-manager.vercel.app/tasks)
