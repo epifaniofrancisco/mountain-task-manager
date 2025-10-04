@@ -44,10 +44,14 @@
 
 ## 📦 Instalação
 
-# Instalar dependências
+### Instalar dependências
 
 npm install
 
-# Rodar em desenvolvimento
+### Rodar em desenvolvimento
 
 npm run dev
+
+# Rodar online
+
+(Mountain Task Manager)[https://mountain-task-manager.vercel.app/tasks]
